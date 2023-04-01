@@ -10,7 +10,8 @@ const clearDetailsBtn = document.querySelector('#clear-users');
 const filterBar = `
 <div class="filter-bar">
 
-	<p class="filter-labels">FILTERS: </p>
+	<p class="filter-labels">FILTERS</p>
+	<div class="filters">
 	<div class="filter-field">
 	<p class="field-name">Age</p>
 	<select name="age" id="age" class="field field0">
@@ -22,23 +23,24 @@ const filterBar = `
 	</div>
 
 	<div class="filter-field">
-	<p class="field-name">Height</p>
+	<p class="field-name">Height (cms)</p>
 	<select name="age" id="age" class="field field0">
 		<option selected value="">none</option>
-		<option value="below18"><18</option>
-		<option value="from18to25">18-25</option>
-		<option value="above25">>25</option>
+		<option value="below160"><160</option>
+		<option value="from160to180">160-180</option>
+		<option value="above180">>180</option>
 	</select>
 	</div>
 
 	<div class="filter-field">
-	<p class="field-name">Weight</p>
+	<p class="field-name">Weight (kgs)</p>
 	<select name="age" id="age" class="field field0">
 		<option selected value="">none</option>
-		<option value="below18"><18</option>
-		<option value="from18to25">18-25</option>
-		<option value="above25">>25</option>
+		<option value="below60"><60</option>
+		<option value="from60to100">60-100</option>
+		<option value="above100">>100</option>
 	</select>
+	</div>
 	</div>
 </div>
 `
