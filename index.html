@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyForm</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Main Container -->
+	<main class="container">
+		<!-- Main Form -->
+		<form class="form" id="data-form">
+			<!-- Form Title -->
+			<h2 id="title">ENTER YOUR DETAILS</h2>
+			<!-- Name -->
+			<div class="group">
+				<label for="Name" class="field-name">NAME<span class="asterisk">*</span></label>
+				<input type="text" name="Name" placeholder="Name" class="field" id="name">
+				<p class="error hide" id="name-error">Please enter your name.</p>
+			</div>
+			<!-- Gender -->
+			<div id="gender">
+				<label for="Gender" class="field-name">GENDER<span class="asterisk">*</span> : </label>
+				<input type="radio" name="Gender" value="Male" checked> <span class="gender-field">MALE</span>
+				<input type="radio" name="Gender" value="Female"> <span class="gender-field">FEMALE</span>
+				<input type="radio" name="Gender" value="Others"> <span class="gender-field">OTHERS</span>
+			</div>
+			<!-- Age -->
+			<div class="group">
+				<label class="field-name">AGE<span class="asterisk">*</span></label>
+				<input type="text" name="Age" placeholder="Age" class="field" id="age">
+				<p class="error hide" id="age-error">Invalid Age</p>
+			</div>
+			<!-- Height -->
+			<div class="group">
+				<label class="field-name">HEIGHT (cms)<span class="asterisk">*</span></label>
+				<input type="text" name="Height" placeholder="Height" class="field" id="height">
+				<p class="error hide" id="height-error">Invalid Height</p>
+			</div>
+			<!-- Weight -->
+			<div class="group">
+				<label class="field-name">WEIGHT (kgs)<span class="asterisk">*</span></label>
+				<input type="text" name="Weight" placeholder="Weight" class="field" id="weight">
+				<p class="error hide" id="weight-error">Invalid Weight</p>
+			</div>
+			
+			<!-- Submit Button -->
+			<button type="submit" id="submit-btn">Submit</button>
+			<!-- Submit Status -->
+			<p id="submitted" class="hide">&#x2714;</p>
+		</form>
+		<!-- Controls -->
+		<div class="controls">
+			<button id="show-users" class="control-btn">Show Users</button>
+			<button id="clear-users" class="control-btn">Clear Users</button>
+		</div>
+		<!-- Data Display Section -->
+		<div class="data hide">
+		</div>
+		<!-- End Credits -->
+		<div id="end-credit">
+			<p>Made with <span id="heart">&#x2764;</span> by Shakeeb&#x2728;</p>
+		</div>
+	</main>
+	<!-- Scripts -->
+	<script src="./index.js"></script>
+	<script src="./error_validations.js"></script>
+</body>
+</html>

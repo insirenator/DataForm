@@ -1,0 +1,273 @@
+* {
+	margin: 0;
+	font-family: verdana;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 10px;
+	background-image: linear-gradient(to bottom, #2FBEFF, #154188);
+
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	background-color: white;
+	width: clamp(350px, 80%, 600px);
+	margin-top: 15px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 2px 5px black;
+	padding: 18px 40px;
+}
+
+.group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	margin: 15px 0;
+}
+
+#gender {
+	margin: 15px 0;
+}
+
+.gender-field {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.field-name {
+	color: #404040;
+	font-size: 12px;
+}
+
+.field {
+	border: none;
+	box-shadow: 0px 1px 3px black;
+	border-radius: 8px;
+	height: 35px;
+	padding: 0 10px;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.field:hover {
+	box-shadow: 0px 2px 5px black;
+}
+
+#title {
+	color: #1293EC;
+	margin: 20px auto;
+	font-size: 18px;
+}
+
+.asterisk {
+	color: red;
+	font-weight: bolder;
+}
+
+.error {
+	font-size: 12px;
+	color: red;
+	margin-top: 5px;
+	margin-left: 8px; 
+}
+
+#submit-btn {
+	color: white;
+	font-size: 14px;
+	width: 120px;
+	padding: 10px;
+	background-color: #1293EC;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 1px 4px black;
+	cursor: pointer;
+	margin: 0 auto; 
+	margin-top: 10px;
+}
+
+#submit-btn:hover {
+	background-color: #1673EC; 
+	box-shadow: 0px 2px 5px black;
+}
+
+#submit-btn:active {
+	background-color: #5283EC; 
+}
+
+#submitted {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #12dd3b;
+	margin: 0 auto; 
+	margin-top: 10px;
+}
+
+#clear-btn {
+	color: white;
+	font-size: 14px;
+	width: 100px;
+	padding: 10px;
+	background-color: #FF2400;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 1px 4px black;
+	cursor: pointer;
+	margin: 0 auto; 
+	margin-top: 10px;
+}
+
+#clear-btn:hover {
+	background-color: #F1493A; 
+	box-shadow: 0px 2px 5px black;
+}
+
+#clear-btn:active {
+	background-color: #FF1400; 
+}
+
+.controls {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	width: clamp(350px, 80%, 600px);
+	font-size: 18px;
+	border-radius: 8px;
+	box-shadow: 0px 2px 5px black;
+	padding: 18px;
+	margin-top: 15px;
+}
+
+.control-btn {
+	font-size: 12px;
+	width: 100px;
+	padding: 8px;
+	background-color: white;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 1px 4px black;
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+.control-btn:hover {
+/*	background-color: #1673EC; */
+	box-shadow: 0px 2px 5px black;
+}
+
+.control-btn:active {
+	background-color: #b0b0b0; 
+}
+
+#clear-users {
+	color: white;
+	background-color: red;
+}
+
+#clear-users:hover {
+	color: white;
+	background-color: #bf0202;
+}
+
+#clear-users:active {
+	color: white;
+	background-color: #d02020;
+}
+
+.data {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	background-color: white;
+	width: clamp(350px, 80%, 600px);
+	font-size: 18px;
+	border-radius: 8px;
+	box-shadow: 0px 2px 5px black;
+	padding: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#data-title{
+	margin: 0 auto;
+	color: #154188;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.filter-bar {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 18px 0;
+}
+
+.filter-labels {
+	font-size: 12px;
+}
+
+.filter-field {
+	display: flex;
+	flex-direction: column;
+}
+
+.field0 {
+	height: 20px;
+}
+
+.user {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	box-shadow: 0px 1px 3px black;
+	padding: 8px;
+	border-radius: 5px;
+	border-radius: 5px;
+	width: 85px;
+	font-size: 14px;
+}
+
+.entry {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 5px;
+	font-size: 14px;
+	width: 100%;
+}
+
+.entry-title {
+	color: #154188;
+	font-weight: bold;
+	margin-right: 15px;
+	width: 110px;
+}
+
+#end-credit{
+	color: white;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+#heart{
+	color: red;
+	font-size: 18px;
+}
+
+.hide {
+	display: none;
+}
