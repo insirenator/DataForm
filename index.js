@@ -43,7 +43,32 @@ const filterBar = `
 	</div>
 	</div>
 </div>
-`
+`;
+
+const sortBar = `
+<div class="filter-bar">
+	<div class="filters">
+	<div class="filter-field">
+	<p class="field-name">Sort By</p>
+	<select name="sortBy" id="sort-by" class="field field0">
+		<option selected value="">none</option>
+		<option value="name">Name</option>
+		<option value="age">Age</option>
+		<option value="height">Height</option>
+		<option value="weight">Weight</option>
+	</select>
+	</div>
+
+	<div class="filter-field">
+	<p class="field-name">Order By</p>
+	<select name="orderBy" id="order-by" class="field field0">
+		<option value="ascending" selected>Ascending</option>
+		<option value="descending">Descending</option>
+	</select>
+	</div>
+	</div>
+</div>
+`;
 
 // Submit Button Event Listener
 submitBtn.addEventListener('click', (e) => {
@@ -82,7 +107,8 @@ submitBtn.addEventListener('click', (e) => {
 // Show Details Button Event Listener
 showDetailsBtn.addEventListener('click', () => {
 	if(data_el.classList.contains('hide')){
-		displayData(); // Also sets the button to hide users
+		let users = JSON.parse(localStorage.getItem('userRecord'));
+		displayData(users); // Also sets the button to hide users
 		window.scroll({
 			top: 780,
 			left: 0,
@@ -140,9 +166,7 @@ function showTick() {
 }
 
 // Displays the user data in organised form
-function displayData() {
-
-	let users = JSON.parse(localStorage.getItem('userRecord'));
+function displayData(users) {
 
 	if (isNotDisplayable(users)) {
 		alert('No Users in Database!');
@@ -155,8 +179,8 @@ function displayData() {
 
 		//Add the title
 		data_el.innerHTML = '<h3 id="data-title">USER DETAILS</h3>';
-		// Add the filter bar
-		data_el.innerHTML += filterBar;
+		// Add the Sort bar
+		data_el.innerHTML += sortBar;
 
 		data_el.classList.remove('hide');
 		users.forEach((user, idx) => {
