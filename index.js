@@ -40,6 +40,14 @@ submitBtn.addEventListener('click', (e) => {
 		userRecord.push(valuesObj);
 		localStorage.setItem('userRecord', JSON.stringify(userRecord));
 		showTick(); // Show the submitted tick
+		//Clear out the fields
+		clearFormFields();
+
+		//Update the data section if its open
+		if(!data_el.classList.contains('hide')) {
+			userRecord = sortUsers(userRecord, sortBy.value, orderBy.value);
+			displayData(userRecord);			
+		}
 	}
 });
 
@@ -47,9 +55,10 @@ submitBtn.addEventListener('click', (e) => {
 showDetailsBtn.addEventListener('click', () => {
 	if(data_el.classList.contains('hide')){
 		let users = JSON.parse(localStorage.getItem('userRecord'));
+		users = sortUsers(users, sortBy.value, orderBy.value)
 		displayData(users); // Also sets the button to hide users
 		window.scroll({
-			top: 780,
+			top: 600,
 			left: 0,
 			behavior: "smooth",
 		});
@@ -102,6 +111,13 @@ function showTick() {
 	setTimeout(() => {
 		tick.classList.add('hide');
 	}, 1000);
+}
+
+function clearFormFields() {
+	document.querySelector('#name').value = "";
+	document.querySelector('#age').value = "";
+	document.querySelector('#height').value = "";
+	document.querySelector('#weight').value = "";
 }
 
 // Displays the user data in organised form
