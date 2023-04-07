@@ -53,8 +53,9 @@ body {
 
 .field {
 	border: none;
-	box-shadow: 0px 1px 3px black;
-	border-radius: 8px;
+	border-bottom: 2px solid grey;
+	/*box-shadow: 0px 1px 3px black;*/
+	/*border-radius: 8px;*/
 	height: 35px;
 	padding: 0 10px;
 	width: 100%;
@@ -62,7 +63,12 @@ body {
 }
 
 .field:hover {
-	box-shadow: 0px 2px 5px black;
+	box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6);
+}
+
+.field:focus {
+	outline: none;
+	border-bottom-color: #1293EC; 
 }
 
 #title {
