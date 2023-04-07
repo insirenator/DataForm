@@ -7,68 +7,7 @@ const submitBtn = document.querySelector('#submit-btn');
 const showDetailsBtn = document.querySelector('#show-users');
 const clearDetailsBtn = document.querySelector('#clear-users');
 
-const filterBar = `
-<div class="filter-bar">
 
-	<p class="filter-labels">FILTERS</p>
-	<div class="filters">
-	<div class="filter-field">
-	<p class="field-name">Age</p>
-	<select name="age" id="age" class="field field0">
-		<option selected value="">none</option>
-		<option value="below18"><18</option>
-		<option value="from18to25">18-25</option>
-		<option value="above25">>25</option>
-	</select>
-	</div>
-
-	<div class="filter-field">
-	<p class="field-name">Height (cms)</p>
-	<select name="age" id="age" class="field field0">
-		<option selected value="">none</option>
-		<option value="below160"><160</option>
-		<option value="from160to180">160-180</option>
-		<option value="above180">>180</option>
-	</select>
-	</div>
-
-	<div class="filter-field">
-	<p class="field-name">Weight (kgs)</p>
-	<select name="age" id="age" class="field field0">
-		<option selected value="">none</option>
-		<option value="below60"><60</option>
-		<option value="from60to100">60-100</option>
-		<option value="above100">>100</option>
-	</select>
-	</div>
-	</div>
-</div>
-`;
-
-const sortBar = `
-<div class="filter-bar">
-	<div class="filters">
-	<div class="filter-field">
-	<p class="field-name">Sort By</p>
-	<select name="sortBy" id="sort-by" class="field field0">
-		<option selected value="">none</option>
-		<option value="name">Name</option>
-		<option value="age">Age</option>
-		<option value="height">Height</option>
-		<option value="weight">Weight</option>
-	</select>
-	</div>
-
-	<div class="filter-field">
-	<p class="field-name">Order By</p>
-	<select name="orderBy" id="order-by" class="field field0">
-		<option value="ascending" selected>Ascending</option>
-		<option value="descending">Descending</option>
-	</select>
-	</div>
-	</div>
-</div>
-`;
 
 // Submit Button Event Listener
 submitBtn.addEventListener('click', (e) => {
@@ -173,16 +112,16 @@ function displayData(users) {
 	} 
 	else {
 		console.log("Number of users = " + users.length);
+
 		
 		// Set the button to hide user
 		showDetailsBtn.textContent = "Hide Users";
 
 		//Add the title
-		data_el.innerHTML = '<h3 id="data-title">USER DETAILS</h3>';
-		// Add the Sort bar
-		data_el.innerHTML += sortBar;
+		data_el.innerHTML = '';
 
 		data_el.classList.remove('hide');
+
 		users.forEach((user, idx) => {
 			data_el.innerHTML += `<p class="user">USER ${idx+1}</p>`;
 

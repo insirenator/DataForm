@@ -16,33 +16,33 @@
 			<h2 id="title">ENTER YOUR DETAILS</h2>
 			<!-- Name -->
 			<div class="group">
-				<label for="Name" class="field-name">NAME<span class="asterisk">*</span></label>
-				<input type="text" name="Name" placeholder="Name" class="field" id="name">
+				<label for="name" class="field-name">NAME<span class="asterisk">*</span></label>
+				<input type="text" name="name" placeholder="Name" class="field" id="name">
 				<p class="error hide" id="name-error">Please enter your name.</p>
 			</div>
 			<!-- Gender -->
 			<div id="gender">
-				<label for="Gender" class="field-name">GENDER<span class="asterisk">*</span> : </label>
-				<input type="radio" name="Gender" value="Male" checked> <span class="gender-field">MALE</span>
-				<input type="radio" name="Gender" value="Female"> <span class="gender-field">FEMALE</span>
-				<input type="radio" name="Gender" value="Others"> <span class="gender-field">OTHERS</span>
+				<label for="gender" class="field-name">GENDER<span class="asterisk">*</span> : </label>
+				<input type="radio" name="gender" value="Male" checked> <span class="gender-field">MALE</span>
+				<input type="radio" name="gender" value="Female"> <span class="gender-field">FEMALE</span>
+				<input type="radio" name="gender" value="Others"> <span class="gender-field">OTHERS</span>
 			</div>
 			<!-- Age -->
 			<div class="group">
 				<label class="field-name">AGE<span class="asterisk">*</span></label>
-				<input type="text" name="Age" placeholder="Age" class="field" id="age">
+				<input type="text" name="age" placeholder="Age" class="field" id="age">
 				<p class="error hide" id="age-error">Invalid Age</p>
 			</div>
 			<!-- Height -->
 			<div class="group">
 				<label class="field-name">HEIGHT (cms)<span class="asterisk">*</span></label>
-				<input type="text" name="Height" placeholder="Height" class="field" id="height">
+				<input type="text" name="height" placeholder="Height" class="field" id="height">
 				<p class="error hide" id="height-error">Invalid Height</p>
 			</div>
 			<!-- Weight -->
 			<div class="group">
 				<label class="field-name">WEIGHT (kgs)<span class="asterisk">*</span></label>
-				<input type="text" name="Weight" placeholder="Weight" class="field" id="weight">
+				<input type="text" name="weight" placeholder="Weight" class="field" id="weight">
 				<p class="error hide" id="weight-error">Invalid Weight</p>
 			</div>
 			
@@ -57,15 +57,28 @@
 			<button id="clear-users" class="control-btn">Clear Users</button>
 		</div>
 		<!-- Data Display Section -->
-		<div class="data hide">
-		</div>
-		<!-- End Credits -->
-		<div id="end-credit">
-			<p>Made with <span id="heart">&#x2764;</span> by Shakeeb&#x2728;</p>
+		<div class="data-section">
+			<h3 id="data-title">USER DETAILS</h3>
+			<div class="filters">
+				<p>Sort:</p>
+				<select id="sort">
+					<option value="name" selected>Name</option>
+					<option value="age">Age</option>
+					<option value="height">Height</option>
+					<option value="weight">Weight</option>
+				</select>
+				<p>Order:</p>
+				<select id="order">
+					<option value="1" selected>Ascending</option>
+					<option value="-1">Descending</option>
+				</select>
+		    </div>
+			<div class="data hide"></div>
 		</div>
 	</main>
 	<!-- Scripts -->
 	<script src="./index.js"></script>
 	<script src="./error_validations.js"></script>
+	<script src="./sorting.js"></script>
 </body>
 </html>
