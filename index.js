@@ -25,16 +25,7 @@ submitBtn.addEventListener('click', (e) => {
 	// Validation Step for empty fields
 	if (isValidData(valuesObj)){
 
-		let userRecord = function() {
-				let record = localStorage.getItem('userRecord');
-
-				if (record === null) {
-					localStorage.setItem('userRecord', "[]");
-					return [];
-				}
-
-				return JSON.parse(record);
-			}();
+		let userRecord = getUserRecord();
 
 		// Update Local Storage
 		userRecord.push(valuesObj);
@@ -54,7 +45,7 @@ submitBtn.addEventListener('click', (e) => {
 // Show Details Button Event Listener
 showDetailsBtn.addEventListener('click', () => {
 	if(data_el.classList.contains('hide')){
-		let users = JSON.parse(localStorage.getItem('userRecord'));
+		let users = getUserRecord();
 		users = sortUsers(users, sortBy.value, orderBy.value)
 		displayData(users); // Also sets the button to hide users
 		window.scroll({
@@ -97,6 +88,18 @@ function isValidData(valuesObj){
 	// If all good
 	return true;
 
+}
+
+//Get data from local storage
+function getUserRecord() {
+	let record = localStorage.getItem('userRecord');
+
+	if (record === null) {
+		localStorage.setItem('userRecord', "[]");
+		return [];
+	}
+
+	return JSON.parse(record);
 }
 
 // Check whether there is anything to display
